@@ -3,9 +3,22 @@ import { Categories, IToDo, toDoState } from "../atoms";
 
 import styled from "styled-components";
 
-const ListItem = styled.li``;
+const ListItem = styled.li`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: ${(props) => props.theme.cardBgColor};
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+`;
 
-const Text = styled.span``;
+const Text = styled.span`
+  flex: 1;
+  font-size: 16px;
+  color: ${(props) => props.theme.textColor};
+`;
 
 const ButtonGroup = styled.div``;
 
