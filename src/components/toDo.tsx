@@ -20,9 +20,33 @@ const Text = styled.span`
   color: ${(props) => props.theme.textColor};
 `;
 
-const ButtonGroup = styled.div``;
+const ButtonGroup = styled.div`
+  display: flex;
+  gap: 10px;
+`;
 
-const Button = styled.button``;
+const Button = styled.button`
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: ${(props) => props.theme.accentColor};
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: ${(props) => props.theme.textColor};
+    color: ${(props) => props.theme.accentColor};
+  }
+
+  &[name="delete"] {
+    background-color: #db4455;
+    &:hover {
+      background-color: #cf2f11;
+    }
+  }
+`;
 
 function ToDo({ text, category, id }: IToDo) {
   const setToDos = useSetRecoilState(toDoState);
