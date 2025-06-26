@@ -8,7 +8,11 @@ interface IForm {
   toDo: string;
 }
 
-const Form = styled.form``;
+const Form = styled.form`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+`;
 
 const Input = styled.input``;
 
