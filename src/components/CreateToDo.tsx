@@ -14,7 +14,24 @@ const Form = styled.form`
   margin-top: 20px;
 `;
 
-const Input = styled.input``;
+const Input = styled.input`
+  flex: 1;
+  padding: 10px;
+  border: 1px solid ${(props) => props.theme.accentColor};
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: ${(props) => props.theme.cardBgColor};
+  color: ${(props) => props.theme.textColor};
+  font-size: 16px;
+  transition: all 0.3s ease;
+  &::placeholder {
+    color: ${(props) => props.theme.textColor};
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 8px ${(props) => props.theme.accentColor};
+  }
+`;
 
 const Button = styled.button``;
 
