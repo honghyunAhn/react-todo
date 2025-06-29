@@ -34,10 +34,23 @@ const Input = styled.input`
 `;
 
 const Button = styled.button`
+  padding: 10px 15px;
+  background-color: ${(props) => props.theme.accentColor};
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: ${(props) => props.theme.textColor};
+    color: ${(props) => props.theme.accentColor};
+  }
 `;
 
-const ErrorMessage = styled.span`
-`;
+const ErrorMessage = styled.span``;
 
 function CreateToDo() {
   const setToDos = useSetRecoilState(toDoState);
