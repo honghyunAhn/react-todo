@@ -33,9 +33,11 @@ const Input = styled.input`
   }
 `;
 
-const Button = styled.button``;
+const Button = styled.button`
+`;
 
-const ErrorMessage = styled.span``;
+const ErrorMessage = styled.span`
+`;
 
 function CreateToDo() {
   const setToDos = useSetRecoilState(toDoState);
