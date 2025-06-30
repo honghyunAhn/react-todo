@@ -50,7 +50,11 @@ const Button = styled.button`
   }
 `;
 
-const ErrorMessage = styled.span``;
+const ErrorMessage = styled.span`
+  color: ${(props) => props.theme.accentColor};
+  font-size: 14px;
+  margin-top: 5px;
+`;
 
 function CreateToDo() {
   const setToDos = useSetRecoilState(toDoState);
