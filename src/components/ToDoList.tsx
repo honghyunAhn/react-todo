@@ -42,14 +42,44 @@ function ToDoList() {
       <CategoryContainer>
         <ToDoCard>
           <Title>To Do</Title>
+
+          <TaskList>
+            {toDos[Categories.TO_DO].length > 0 ? (
+              toDos[Categories.TO_DO].map((toDo) => (
+                <ToDo key={toDo.id} {...toDo} />
+              ))
+            ) : (
+              <EmptyMessage>No tasks in To Do</EmptyMessage>
+            )}
+          </TaskList>
         </ToDoCard>
 
         <ToDoCard>
           <Title>Doing</Title>
+
+          <TaskList>
+            {toDos[Categories.DOING].length > 0 ? (
+              toDos[Categories.DOING].map((toDo) => (
+                <ToDo key={toDo.id} {...toDo} />
+              ))
+            ) : (
+              <EmptyMessage>No tasks in Doing</EmptyMessage>
+            )}
+          </TaskList>
         </ToDoCard>
 
         <ToDoCard>
           <Title>Done</Title>
+
+          <TaskList>
+            {toDos[Categories.DONE].length > 0 ? (
+              toDos[Categories.DONE].map((toDo) => (
+                <ToDo key={toDo.id} {...toDo} />
+              ))
+            ) : (
+              <EmptyMessage>No tasks in Done</EmptyMessage>
+            )}
+          </TaskList>
         </ToDoCard>
       </CategoryContainer>
     </Container>
