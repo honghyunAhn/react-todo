@@ -6,7 +6,16 @@ import ToDo from "./toDo";
 
 import styled from "styled-components";
 
-const Container = styled.div``;
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: ${(props) => props.theme.bgColor};
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+`;
 
 const Title = styled.h1``;
 
