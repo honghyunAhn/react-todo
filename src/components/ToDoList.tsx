@@ -17,7 +17,13 @@ const Container = styled.div`
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 `;
 
-const Title = styled.h1``;
+const Title = styled.h1`
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: ${(props) => props.theme.textColor};
+  margin-bottom: 20px;
+`;
 
 const ToDoCard = styled.div``;
 const TaskList = styled.ul``;
