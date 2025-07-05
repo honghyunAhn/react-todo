@@ -25,7 +25,13 @@ const Title = styled.h1`
   margin-bottom: 20px;
 `;
 
-const ToDoCard = styled.div``;
+const ToDoCard = styled.div`
+  width: 30%;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: ${(props) => props.theme.cardBgColor};
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+`;
 const TaskList = styled.ul``;
 
 const Select = styled.select``;
