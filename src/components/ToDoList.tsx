@@ -32,7 +32,10 @@ const ToDoCard = styled.div`
   background-color: ${(props) => props.theme.cardBgColor};
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 `;
-const TaskList = styled.ul``;
+const TaskList = styled.ul`
+  list-style: none;
+  padding: 0;
+`;
 
 const Select = styled.select``;
 
