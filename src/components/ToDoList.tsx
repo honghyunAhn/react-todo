@@ -37,7 +37,21 @@ const TaskList = styled.ul`
   padding: 0;
 `;
 
-const Select = styled.select``;
+const Select = styled.select`
+  width: 100%;
+  padding: 10px;
+  border: 2px solid ${(props) => props.theme.accentColor};
+  border-radius: 5px;
+  background-color: ${(props) => props.theme.cardBgColor};
+  color: ${(props) => props.theme.textColor};
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 8px ${(props) => props.theme.accentColor};
+  }
+`;
 
 const CategoryContainer = styled.div``;
 
