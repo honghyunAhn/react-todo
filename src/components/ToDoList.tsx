@@ -53,7 +53,12 @@ const Select = styled.select`
   }
 `;
 
-const CategoryContainer = styled.div``;
+const CategoryContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 20px;
+`;
 
 const EmptyMessage = styled.div``;
 
