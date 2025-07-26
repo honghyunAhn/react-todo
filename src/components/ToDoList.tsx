@@ -60,7 +60,12 @@ const CategoryContainer = styled.div`
   gap: 20px;
 `;
 
-const EmptyMessage = styled.div``;
+const EmptyMessage = styled.div`
+  text-align: center;
+  font-size: 18px;
+  color: ${(props) => props.theme.textColor};
+  margin-top: 20px;
+`;
 
 function ToDoList() {
   const toDos = useRecoilValue(toDoSelector);
