@@ -1,3 +1,4 @@
+// 로컬저장
 import { atom, selector } from "recoil";
 import { recoilPersist } from "recoil-persist";
 
@@ -33,6 +34,16 @@ export const toDoSelector = selector({
   key: "toDoSelector",
   get: ({ get }) => {
     const toDos = get(toDoState);
-    return {};
+    return {
+      [Categories.TO_DO]: toDos.filter(
+        (toDo) => toDo.category === Categories.TO_DO
+      ),
+      [Categories.DOING]: toDos.filter(
+        (toDo) => toDo.category === Categories.DOING
+      ),
+      [Categories.DONE]: toDos.filter(
+        (toDo) => toDo.category === Categories.DONE
+      ),
+    };
   },
 });
