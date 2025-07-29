@@ -1,4 +1,3 @@
-// 로컬저장
 import { atom, selector } from "recoil";
 import { recoilPersist } from "recoil-persist";
 
